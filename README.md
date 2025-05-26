@@ -2,8 +2,6 @@
 
 This project is a stylish and responsive clock that displays both analog and digital time. Built using pure HTML, CSS, and JavaScript, it serves as a great reference for real-time rendering, rotation logic, and UI design.
 
-![Clock Screenshot](assets/icon512.png)
-
 ## 🔧 Features
 
 - Smooth animated clock hands
@@ -14,7 +12,7 @@ This project is a stylish and responsive clock that displays both analog and dig
 
 ## 🚀 Demo
 
-Try it live: [Live Demo](https://your-demo-link.com)
+Try it live: [Live Demo](https://mohammadsameer01.github.io/clock/)
 
 ## 📁 File Structure
 
@@ -31,6 +29,6 @@ project-root/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/clock-app.git
-   cd clock-app
+   git clone https://github.com/MohammadSameer01/clock.git
+   cd clock
    ```

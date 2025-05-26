@@ -3,7 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clock</title>
+    <title>Analog + Digital Clock</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="A modern analog and digital clock web app built with HTML, CSS, and JavaScript. Perfect for learning or use in real-time clock displays."
+    />
+    <meta
+      name="keywords"
+      content="clock, analog clock, digital clock, HTML clock, JavaScript clock, responsive clock, real-time clock"
+    />
+    <meta name="author" content="Mohammad Sameer" />
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Analog + Digital Clock Web App" />
+    <meta
+      property="og:description"
+      content="A beautiful and responsive analog-digital clock built using HTML, CSS, and JavaScript."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/icon512.png" />
+    <meta
+      property="og:url"
+      content="https://mohammadsameer01.github.io/clock/"
+    />
+
+    <!-- Favicon and Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="assets/icon256.png"
+    />
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/icon512.png" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -32,7 +68,14 @@
         </div>
       </div>
     </section>
-
-    <script src="script.js"></script>
+    <div class="digital-time-container">
+      <div class="d-hour">12</div>
+      <span>:</span>
+      <div class="d-minutes">01</div>
+      <span>:</span>
+      <div class="d-seconds">60</div>
+      <div class="meridian">PM</div>
+    </div>
   </body>
+  <script src="script.js"></script>
 </html>

@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 .flex-justify-align-center {
   display: flex;
@@ -10,8 +13,7 @@
 }
 /*  */
 body {
-  background: black;
-  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
 }
 
 section {
@@ -24,18 +26,61 @@ section {
   padding: 24px;
 }
 .clock {
-  background: white;
+  background: #111;
   height: 100%;
   width: 100%;
   border-radius: 50%;
   position: relative;
+  border: 12px solid #202020;
+  box-shadow: 24px 48px 48px 12px rgba(0, 0, 0, 0.75);
 }
 /*  */
 .hands-container {
-  background: black;
-  padding: 6px;
   border-radius: 50%;
   position: absolute;
+  border: 10px solid black;
+}
+.hands-container::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  border: 10px solid black;
+  border-radius: 50%;
+  left: -10px;
+  top: -10px;
+}
+.hour {
+  width: 6px;
+  background: rgb(222, 222, 222);
+  z-index: 1;
+  border-radius: 24px;
+  transform-origin: bottom center;
+  position: absolute;
+  bottom: 50%; /* or center it */
+  left: 50%;
+  display: none;
+}
+.minutes {
+  width: 4px;
+  background: rgb(222, 222, 222);
+  z-index: 2;
+  border-radius: 24px;
+  transform-origin: bottom center;
+  position: absolute;
+  bottom: 50%; /* or center it */
+  left: 50%;
+  display: none;
+}
+.seconds {
+  width: 2px;
+  background: red;
+  z-index: 3;
+  border-radius: 24px;
+  transform-origin: bottom center;
+  position: absolute;
+  bottom: 50%; /* or center it */
+  left: 50%;
+  display: none;
 }
 /*  */
 .numbers-container {
@@ -51,12 +96,44 @@ section {
   width: 48px;
   aspect-ratio: 1;
   color: black;
+  color: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   transform: translate(-50%, -50%);
-  font-size: 1.25em;
-  display: none;
+  display: none !important;
+}
+.number:nth-child(3),
+.number:nth-child(6),
+.number:nth-child(9),
+.number:nth-child(12) {
+  color: white;
+  font-size: 2em;
+  display: flex !important;
+}
+/*  */
+/*  */
+/*  */
+.digital-time-container {
+  background: black;
+  position: fixed;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  font-weight: 600;
+  color: white;
+  border-radius: 12px;
+}
+.digital-time-container div {
+  width: 48px;
+  text-align: center;
+}
+.digital-time-container div:nth-child(5) {
+  color: red;
 }
