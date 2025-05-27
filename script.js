@@ -57,9 +57,6 @@ function updateClockHandsSmooth() {
 
   updateDigitalClock(now);
 }
-// Call it every second
-setInterval(updateClockHandsSmooth, 1000);
-updateClockHandsSmooth();
 function updateDigitalClock(time) {
   const digitalHour = document.querySelector(".d-hour");
   const digitalMinutes = document.querySelector(".d-minutes");
@@ -81,3 +78,4 @@ function updateDigitalClock(time) {
   digitalSeconds.textContent = seconds.toString().padStart(2, "0");
   meridian.textContent = ampm;
 }
+updateClockHandsSmooth();
